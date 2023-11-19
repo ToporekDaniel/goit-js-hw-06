@@ -8,9 +8,12 @@ const ingredients = [
 ];
 
 const ulIngredients = document.querySelector("#ingredients");
+const ingTable = [];
 
 ingredients.forEach((ingredient) => {
   const ing = document.createElement("li");
   ing.textContent = `${ingredient}`;
-  ulIngredients.append(ing);
+  ingTable.push(ing);
 });
+
+ulIngredients.append(...ingTable);
